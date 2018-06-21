@@ -1,0 +1,14 @@
+[Unit]
+Description=check-ip service
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=github.example.user
+ExecStart=/usr/local/bin/check-ip.sh
+
+[Install]
+WantedBy=multi-user.target
